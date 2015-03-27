@@ -361,7 +361,19 @@ hr {
 }
 .section-community .fb-like {
   position: relative;
-  top: -6px;
+  top: -4px;
+}
+.section-community .social-row {
+  margin-top: 5px;
+}
+.section-community .social-row > div {
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .section-community .social-row > div {
+    text-align: left;
+    margin-left: 41.66666666666667%;
+  }
 }
 
 .section-html5-native .chrome-game {

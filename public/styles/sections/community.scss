@@ -5,6 +5,18 @@
 
 	.fb-like {
 		position: relative;
-  		top: -6px;
+  		top: -4px;
+	}
+
+	.social-row {
+		margin-top: 5px;
+		&>div {
+	  		text-align: center;
+
+	  		@media (max-width: $screen-sm-min) {
+		  		text-align: left;
+				margin-left: 41.66666666666667%;
+	  		}
+		}
 	}
 }
