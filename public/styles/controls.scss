@@ -1,0 +1,59 @@
+/**
+ * Overload for bootstraps controls to fit the website theme
+ */
+
+ @mixin button($color, $shadow:true) {
+ 	$border-color: darken($color, 20%);
+ 	transition: background-color 0.5s ease;
+ 	transition: border-color 0.5s ease;
+ 	margin-bottom: 10px;
+	background-color: $color;
+	border-color: $color;
+	@if $shadow {
+		box-shadow: 0px 2px 0 $border-color;
+	}
+
+	&:hover, &:active {
+		background-color: lighten($color, 5%) !important;
+		border-color: white;
+	}
+ }
+
+ @mixin badge($color, $shadow:true) {
+ 	$border-color: darken($color, 20%);
+	background-color: $color;
+	border-color: $color;
+	@if $shadow {
+		box-shadow: 0px 2px 0 $border-color;
+	}
+ }
+
+ @mixin scroll-down($color, $width, $height: $width) {
+	@include button($color, false);
+
+    width: $width;
+    height: $height;
+	font-family: "FontAwesome";
+	font-size: 37px;
+	display: block;
+	content: "\f106";
+	text-align: center;
+	color: #fff;
+	border: 1px solid white;
+	border-bottom: none;
+	margin-bottom: 0;
+ }
+
+.btn-primary {
+	@include button(darken($alternate-color-light, 10%));
+}
+
+.btn-info {
+	@include button($alternate-color-light);
+}
+
+hr {
+	border-top: 1px solid $alternate-color-light;
+	margin-bottom: 30px;
+	@include centered-div(70%)
+}

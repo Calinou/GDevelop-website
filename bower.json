@@ -1,0 +1,23 @@
+{
+  "name": "GDevelop-website",
+  "version": "1.0.0",
+  "authors": [
+    "Florian Rival <Florian.Rival@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "normalize.css": "~3.0.2",
+    "modernizr": "~2.8.3",
+    "slick.js": "~1.4.1",
+    "platform": "~1.3.0"
+  }
+}

@@ -1,0 +1,65 @@
+@import "../tab-mixins/tab-mixins";
+
+.section-events {
+	@extend .section-screen;
+
+	.background {
+		z-index: -10;
+		position: absolute;
+		width: 60%;
+		height: 95%;
+		bottom: -60px;
+		right: -30px;
+
+		background: url(../assets/events-background.png) no-repeat left top;
+		background-size: cover;
+
+		display: none; //Hide background on small screens
+  		@media (min-width: $screen-sm-min) {
+			display: block;
+			opacity: 0.3;
+		}
+	}
+
+	p {
+		z-index: 10;
+		@include centered-div(80%);
+	}
+
+	.explanation-row {
+		//Vertically center content on large screens
+  		@media (min-width: $screen-sm-min) {
+			height: 25%;
+
+			p {
+				margin-top: 50px;
+				text-align: justify;
+			}
+		}
+	}
+
+	.example-row {
+		z-index: 10;
+
+		.col-md-12 {
+			height: 100%;
+
+			.well {
+				box-shadow: 0 0 20px white;
+				p {
+					opacity: 0.57;
+					margin-top: 5px;
+				}
+			}
+		}
+
+		//Vertically center content on large screens
+  		@media (min-width: $screen-sm-min) {
+			height: 45%;
+
+			.well {
+				@include vertical-align(50%);
+			}
+		}
+	}
+}

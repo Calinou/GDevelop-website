@@ -1,0 +1,38 @@
+@import "../tab-mixins/tab-mixins";
+
+.section-gallery {
+	@extend .section-screen;
+
+	padding: 0;
+	padding-top: 25px;
+
+	.background {
+		//background: url(../assets/gallery-bg.png) no-repeat bottom center;
+		//background-size: contain;
+		z-index: -10;
+		width: 100%;
+		position: absolute;
+		height: 90%;
+		bottom: 0;
+	}
+
+	.games-carousel {
+		.slick-slide {
+			margin: 0 5px;
+		}
+		.game-screenshot {
+			max-width: 100%;
+			max-height: 50vh;
+		}
+	}
+
+	.your-game {
+   		font-family: 'lobster_1.4regular', Arial, sans-serif;
+		font-size: 1.3em;
+		position: absolute;
+		bottom: 34px;
+		text-align: center;
+		width: 100%;
+		margin-left: -15px;
+	}
+}

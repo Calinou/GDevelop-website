@@ -1,0 +1,17 @@
+{
+  "name": "GDevelop-website",
+  "version": "1.0.0",
+  "description": "Website for GDevelop, the open source game creator requiring no programming skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florian Rival",
+  "license": "MIT",
+  "dependencies": {
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-wiredep": "^2.0.0"
+  }
+}

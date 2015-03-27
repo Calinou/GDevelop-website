@@ -1,0 +1,22 @@
+@import "../tab-mixins/tab-mixins";
+
+.section-html5-native {
+	@extend .section-screen;
+
+	.chrome-game {
+		overflow: hidden;
+		z-index: -10;
+		position: absolute;
+		width: 100%;
+		height: 70%;
+		bottom: 0;
+
+		background: url(../assets/chrome-with-game.png) no-repeat bottom left;
+		background-size: contain;
+	}
+
+	.phone-game {
+		width: 50%;
+		float: right;
+	}
+}

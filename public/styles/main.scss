@@ -1,0 +1,27 @@
+/**
+ * The entry point for all the styles used by the website
+ */
+
+//Site specific styles
+$main-color-light: #f1f2f2;
+$main-color-dark: #80639D;
+$alternate-color-light: #5DBFE7;
+$alternate-color-dark: #4D5EA6;
+$screen-sm-min: 992px;
+
+@import "sections";
+@import "sections-list";
+@import "controls";
+@import "footer";
+
+//Global site specific style
+body {
+	overflow-x: hidden;
+	font: 'open_sansregular', Verdana;
+	position: relative; //For scrollspy support
+}
+
+* {
+	margin:0;
+	padding:0;
+}

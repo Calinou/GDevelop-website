@@ -1,0 +1,13 @@
+@import "../tab-mixins/tab-mixins";
+
+.section-download {
+	@extend .section-expandable;
+
+	.nav-tabs {
+		@include nav-tabs($alternate-color-light, $main-color-light);
+	}
+
+	.tab-content {
+		@include tab-content($main-color-light, black);
+	}
+}

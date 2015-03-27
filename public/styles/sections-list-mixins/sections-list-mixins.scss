@@ -1,0 +1,39 @@
+/*
+ * Mixin to create a list of sections based on Bootstrap.
+ */
+
+@mixin sections-list($li-count, $main-color: #e7bb09, $onLeft: true) {
+	.nav-tabs {
+  		height: 100%;
+		border-bottom: none;
+		li {
+			margin-top: 0;
+			height: 90% / $li-count;
+
+			@if $onLeft {
+				border-left: 1px solid $main-color;
+			} @else {
+				border-right: 1px solid $main-color;
+			}
+
+			a {
+				@include vertical-align(50%);
+			}
+
+			&.active {
+				@if $onLeft {
+					border-left: 4px solid $main-color;
+				} @else {
+					border-right: 4px solid $main-color;
+					background-color: white;
+				}
+			}
+
+			&.active > a, & > a { //Override bootstrap defaults
+				background-color: transparent;
+				border: none;
+				color: $main-color;
+			}
+		}
+	}
+}

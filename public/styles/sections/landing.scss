@@ -1,0 +1,61 @@
+
+.section-landing {
+	@extend .section-screen;
+
+	padding: 0;
+	background-color: #423352 !important;
+	background: url(../assets/jumbotron-bg.png) no-repeat center top;
+	background-size: cover;
+
+	text-align: center;
+
+	.centered-banner {
+		@include vertical-align(35%);
+		z-index: 3;
+
+		.titles {
+			background: linear-gradient(90deg, rgba(66, 51, 82, 1), $main-color-dark, rgba(66, 51, 82, 1));
+			margin-bottom: 40px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			h1 {
+				margin: 0;
+				font-size: 3em;
+      			text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.9);
+		   		font-family: 'lobster_1.4regular', Arial, sans-serif;
+				margin-bottom: 20px;
+			}
+
+			h2 {
+				margin: 0;
+				@include centered-div(80%);
+
+				font-size: 1.3em;
+				line-height: 1.5;
+		   		text-shadow: 5 5 1px rgba(0, 0, 0, 0.2);
+		   		font-family: 'Lato', Arial, sans-serif;
+			}
+
+			.foss, .cp, .everyone {
+		   		font-family: 'lobster_1.4regular', Arial, sans-serif;
+				font-size: 1.3em;
+			}
+		}
+
+		.btn-lg {
+			font-size: 1.7em;
+			width: 90%;
+		}
+	}
+
+	.bottom-screen {
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		height: 60%;
+		bottom: -10%;
+		background: url(../assets/landing-screen.png) no-repeat center top;
+		background-size: cover;
+	}
+}

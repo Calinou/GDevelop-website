@@ -1,0 +1,24 @@
+@import "sections-list-mixins/sections-list-mixins";
+
+/* The navigation links for a page */
+.sections-list {
+	@include sections-list(7, #0087CC, false);
+
+	font-family: 'Lato', Arial;
+	font-size: 0.8em;
+
+	//Position
+	height:45%;
+	position: fixed;
+	bottom: -10px;
+	right: 0;
+	z-index: 10;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.8);
+
+
+	display: none; //Disable on small screens
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}

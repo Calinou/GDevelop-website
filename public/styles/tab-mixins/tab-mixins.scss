@@ -1,0 +1,21 @@
+@mixin nav-tabs($main-color: #e7bb09, $active-color: white) {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+	border: none;
+
+	li > a {
+		color: $main-color;
+	}
+	li.active > a {
+		color: $main-color;
+		background-color: $active-color;
+		border-color: transparent;
+  		border-bottom-color: $main-color;
+	}
+}
+
+@mixin tab-content($bg-color: white, $main-color: black) {
+	background-color: $bg-color;
+	color: $main-color;
+	padding: 10px;
+}

@@ -1,0 +1,94 @@
+/**
+ * Describe common classes for sections, and import
+ * the sections used by the website.
+ */
+@import "common-mixins";
+@import "controls";
+
+/*A section is used to cut the page into rows*/
+.section {
+  $sections-padding: 25px;
+
+  font-family: 'Open Sans', sans-serif;
+  padding: $sections-padding;
+  font-size: 1.2em;
+  background-color:$main-color-light;
+  color: #8c8c8c;
+
+  .scroll-down {
+    $width: 64px;
+    $height: 40px;
+    @include scroll-down($alternate-color-light, $width, $height);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -($width / 2);
+
+    transition: height 0.5s ease;
+    &:hover {
+      height: $height * 1.7;
+    }
+  }
+
+  .title-row {
+    h4 {
+      font-family: 'latoregular';
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 0;
+      margin-bottom: 30px;
+      @media (min-width: $screen-sm-min) {
+        font-size: 3em;
+      }
+    }
+  }
+
+  p {
+    opacity: 0.69;
+  }
+}
+
+.section-color-dark {
+  background-color:$main-color-dark;
+  color: white;
+
+  .title-row {
+    h4 {
+      opacity: 1;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.9);
+      font-family: 'Asap', Arial, sans-serif;
+      font-weight: bold;
+    }
+  }
+  p {
+    opacity: 0.89;
+  }
+}
+
+/*A section which has the screen height*/
+.section-screen {
+  @extend .section;
+
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  min-height: 600px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/*A section that has the size of its content*/
+.section-expandable {
+  @extend .section;
+}
+
+//All the sections used by the website:
+@import "sections/landing";
+@import "sections/download";
+@import "sections/events";
+@import "sections/features";
+@import "sections/gallery";
+@import "sections/foss";
+@import "sections/community";
+@import "sections/html5-native";
