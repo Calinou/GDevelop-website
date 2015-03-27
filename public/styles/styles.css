@@ -359,6 +359,10 @@ hr {
 .section-community {
   background-color: #283E56;
 }
+.section-community .fb-like {
+  position: relative;
+  top: -6px;
+}
 
 .section-html5-native .chrome-game {
   overflow: hidden;
