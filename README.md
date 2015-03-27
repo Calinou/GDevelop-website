@@ -1,9 +1,9 @@
 GDevelop website
 ===
 
-This is the website for [GDevelop](http://www.compilgames.net), the open source game creator requiring no programming skills.
+This is the repository for the new website for **[GDevelop](http://www.compilgames.net)**, the open source game creator requiring no programming skills.
 
-Any contribution, design or wording enhancements is welcome!
+Any contribution, design or wording enhancements is welcome! Open issues if you having anything to say or, even better, submit a pull request. You can also discuss with the community on **[GDevelop forums](http://forum.compilgames.net)**.
 
 ## Development
 
