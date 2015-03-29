@@ -29,6 +29,16 @@ $(document).ready(function(){
 		]
 	});
 
+	//Feedbacks
+	$('.user-feedback').slick({
+		centerMode: true,
+		slidesToShow: 1,
+		arrows: false,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000
+	});
+
 	//OS detection
 	if (platform.os.family.indexOf("iOS") !== -1 ||
 		platform.os.family.indexOf("Android") !== -1 ||

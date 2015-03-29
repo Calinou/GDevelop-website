@@ -1,0 +1,13 @@
+.section-feedback {
+	@extend .section-expandable;
+
+	.user-feedback {
+		font-size: 2em;
+		font-style: italic;
+	}
+
+	.text-muted {
+		opacity: 0.7;
+		color: white;
+	}
+}

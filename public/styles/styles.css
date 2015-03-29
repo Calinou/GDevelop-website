@@ -43,14 +43,14 @@ hr {
 }
 
 /*A section is used to cut the page into rows*/
-.section, .section-screen, .section-landing, .section-events, .section-gallery, .section-foss, .section-html5-native, .section-expandable, .section-download, .section-features, .section-community {
+.section, .section-screen, .section-landing, .section-events, .section-gallery, .section-foss, .section-html5-native, .section-expandable, .section-download, .section-features, .section-community, .section-feedback {
   font-family: 'Open Sans', sans-serif;
   padding: 25px;
   font-size: 1.2em;
   background-color: #f1f2f2;
   color: #8c8c8c;
 }
-.section .scroll-down, .section-screen .scroll-down, .section-landing .scroll-down, .section-events .scroll-down, .section-gallery .scroll-down, .section-foss .scroll-down, .section-html5-native .scroll-down, .section-expandable .scroll-down, .section-download .scroll-down, .section-features .scroll-down, .section-community .scroll-down {
+.section .scroll-down, .section-screen .scroll-down, .section-landing .scroll-down, .section-events .scroll-down, .section-gallery .scroll-down, .section-foss .scroll-down, .section-html5-native .scroll-down, .section-expandable .scroll-down, .section-download .scroll-down, .section-features .scroll-down, .section-community .scroll-down, .section-feedback .scroll-down {
   transition: background-color 0.5s ease;
   transition: border-color 0.5s ease;
   margin-bottom: 10px;
@@ -73,14 +73,14 @@ hr {
   margin-left: -32px;
   transition: height 0.5s ease;
 }
-.section .scroll-down:hover, .section-screen .scroll-down:hover, .section-landing .scroll-down:hover, .section-events .scroll-down:hover, .section-gallery .scroll-down:hover, .section-foss .scroll-down:hover, .section-html5-native .scroll-down:hover, .section-expandable .scroll-down:hover, .section-download .scroll-down:hover, .section-features .scroll-down:hover, .section-community .scroll-down:hover, .section .scroll-down:active, .section-screen .scroll-down:active, .section-landing .scroll-down:active, .section-events .scroll-down:active, .section-gallery .scroll-down:active, .section-foss .scroll-down:active, .section-html5-native .scroll-down:active, .section-expandable .scroll-down:active, .section-download .scroll-down:active, .section-features .scroll-down:active, .section-community .scroll-down:active {
+.section .scroll-down:hover, .section-screen .scroll-down:hover, .section-landing .scroll-down:hover, .section-events .scroll-down:hover, .section-gallery .scroll-down:hover, .section-foss .scroll-down:hover, .section-html5-native .scroll-down:hover, .section-expandable .scroll-down:hover, .section-download .scroll-down:hover, .section-features .scroll-down:hover, .section-community .scroll-down:hover, .section-feedback .scroll-down:hover, .section .scroll-down:active, .section-screen .scroll-down:active, .section-landing .scroll-down:active, .section-events .scroll-down:active, .section-gallery .scroll-down:active, .section-foss .scroll-down:active, .section-html5-native .scroll-down:active, .section-expandable .scroll-down:active, .section-download .scroll-down:active, .section-features .scroll-down:active, .section-community .scroll-down:active, .section-feedback .scroll-down:active {
   background-color: #73c8ea !important;
   border-color: white;
 }
-.section .scroll-down:hover, .section-screen .scroll-down:hover, .section-landing .scroll-down:hover, .section-events .scroll-down:hover, .section-gallery .scroll-down:hover, .section-foss .scroll-down:hover, .section-html5-native .scroll-down:hover, .section-expandable .scroll-down:hover, .section-download .scroll-down:hover, .section-features .scroll-down:hover, .section-community .scroll-down:hover {
+.section .scroll-down:hover, .section-screen .scroll-down:hover, .section-landing .scroll-down:hover, .section-events .scroll-down:hover, .section-gallery .scroll-down:hover, .section-foss .scroll-down:hover, .section-html5-native .scroll-down:hover, .section-expandable .scroll-down:hover, .section-download .scroll-down:hover, .section-features .scroll-down:hover, .section-community .scroll-down:hover, .section-feedback .scroll-down:hover {
   height: 68px;
 }
-.section .title-row h4, .section-screen .title-row h4, .section-landing .title-row h4, .section-events .title-row h4, .section-gallery .title-row h4, .section-foss .title-row h4, .section-html5-native .title-row h4, .section-expandable .title-row h4, .section-download .title-row h4, .section-features .title-row h4, .section-community .title-row h4 {
+.section .title-row h4, .section-screen .title-row h4, .section-landing .title-row h4, .section-events .title-row h4, .section-gallery .title-row h4, .section-foss .title-row h4, .section-html5-native .title-row h4, .section-expandable .title-row h4, .section-download .title-row h4, .section-features .title-row h4, .section-community .title-row h4, .section-feedback .title-row h4 {
   font-family: 'latoregular';
   text-align: center;
   font-size: 1.5em;
@@ -88,11 +88,11 @@ hr {
   margin-bottom: 30px;
 }
 @media (min-width: 992px) {
-  .section .title-row h4, .section-screen .title-row h4, .section-landing .title-row h4, .section-events .title-row h4, .section-gallery .title-row h4, .section-foss .title-row h4, .section-html5-native .title-row h4, .section-expandable .title-row h4, .section-download .title-row h4, .section-features .title-row h4, .section-community .title-row h4 {
+  .section .title-row h4, .section-screen .title-row h4, .section-landing .title-row h4, .section-events .title-row h4, .section-gallery .title-row h4, .section-foss .title-row h4, .section-html5-native .title-row h4, .section-expandable .title-row h4, .section-download .title-row h4, .section-features .title-row h4, .section-community .title-row h4, .section-feedback .title-row h4 {
     font-size: 3em;
   }
 }
-.section p, .section-screen p, .section-landing p, .section-events p, .section-gallery p, .section-foss p, .section-html5-native p, .section-expandable p, .section-download p, .section-features p, .section-community p {
+.section p, .section-screen p, .section-landing p, .section-events p, .section-gallery p, .section-foss p, .section-html5-native p, .section-expandable p, .section-download p, .section-features p, .section-community p, .section-feedback p {
   opacity: 0.69;
 }
 
@@ -389,6 +389,15 @@ hr {
 .section-html5-native .phone-game {
   width: 50%;
   float: right;
+}
+
+.section-feedback .user-feedback {
+  font-size: 2em;
+  font-style: italic;
+}
+.section-feedback .text-muted {
+  opacity: 0.7;
+  color: white;
 }
 
 /*
