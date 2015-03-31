@@ -261,6 +261,16 @@ hr {
   background: url("../assets/games-background.jpg") no-repeat center right;
   background-color: #423352 !important;
 }
+.section-features .feature-row h4 {
+  opacity: 1;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.9);
+  font-family: 'Asap', Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 1.6em;
+}
 .section-features .feature-row p {
   opacity: 1;
   font-family: 'Lato', Arial, sans-serif;

@@ -8,27 +8,39 @@
 	background-color: $background-color !important;
 	//background-size: cover;
 
-	.feature-row p {
-		opacity: 1;
-		font-family: 'Lato', Arial, sans-serif;
-		font-size: 1.3em;
-
-		background: linear-gradient(90deg, $background-color, $background-color, rgba(66, 51, 82, 0));
-		padding: 4px;
-		border-left: solid 3px $main-color-dark;
-
-		.text-muted {
-			color: white;
-		   	font-family: 'lobster_1.4regular', Arial, sans-serif;
-			font-size: 0.8em;
-			opacity: 0.65;
+	.feature-row {
+		h4 {
+			opacity: 1;
+			text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.9);
+			font-family: 'Asap', Arial, sans-serif;
+			font-weight: bold;
+			margin-top: 35px;
+			margin-bottom: 14px;
+			text-align: center;
+			font-size: 1.6em;
 		}
 
-		.badge {
-			@include badge($alternate-color-light);
-			vertical-align: middle;
-			margin-bottom: 3px;
-		}
+		p {
+			opacity: 1;
+			font-family: 'Lato', Arial, sans-serif;
+			font-size: 1.3em;
 
+			background: linear-gradient(90deg, $background-color, $background-color, rgba(66, 51, 82, 0));
+			padding: 4px;
+			border-left: solid 3px $main-color-dark;
+
+			.text-muted {
+				color: white;
+			   	font-family: 'lobster_1.4regular', Arial, sans-serif;
+				font-size: 0.8em;
+				opacity: 0.65;
+			}
+
+			.badge {
+				@include badge($alternate-color-light);
+				vertical-align: middle;
+				margin-bottom: 3px;
+			}
+		}
 	}
 }
