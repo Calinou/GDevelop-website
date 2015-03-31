@@ -18,13 +18,15 @@ Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for manag
 
 ### Workflow
 
-To update index.html with bower dependencies, compile stylesheets and javascript files, launch grunt:
+To update main.html with bower dependencies, compile stylesheets and javascript files, launch grunt:
 
     grunt
 
 A grunt *watch* task is available that monitor any changes to the .js or .scss files:
 
     grunt watch
+
+Simply open main.html to see the website. Language redirections is handled by index.php (require that you access to this file using a PHP server)
 
 ## License
 
