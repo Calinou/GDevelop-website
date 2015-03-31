@@ -491,6 +491,54 @@ footer p {
   opacity: 0.69;
 }
 
+.side-menu-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  opacity: 0.80;
+  z-index: 21;
+}
+.side-menu-button:hover {
+  opacity: 1;
+}
+
+.side-menu {
+  position: fixed;
+  width: 90%;
+  height: 100vh;
+  min-height: 300px;
+  overflow-y: auto;
+  z-index: 20;
+  border-right: 1px solid #80639D;
+  padding-top: 80px;
+  background-color: #f1f2f2;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  left: -100px;
+}
+.side-menu ul {
+  list-style: none;
+}
+.side-menu ul li > .btn {
+  width: 100%;
+}
+.side-menu h4 {
+  opacity: 0.64;
+}
+@media (min-width: 992px) {
+  .side-menu {
+    width: 50%;
+    max-width: 330px;
+  }
+}
+.side-menu.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  left: 0;
+}
+
 body {
   overflow-x: hidden;
   font: 'open_sansregular', Verdana;

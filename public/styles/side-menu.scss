@@ -1,0 +1,54 @@
+.side-menu-button {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	opacity: 0.80;
+	z-index: 21;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.side-menu {
+	position: fixed;
+	width: 90%;
+	height: 100vh;
+	min-height: 300px;
+    overflow-y: auto;
+	z-index: 20;
+	border-right: 1px solid $main-color-dark;
+	padding-top: 80px;
+	background-color: $main-color-light;
+
+	ul {
+		list-style: none;
+
+		li > .btn {
+			width: 100%;
+		}
+	}
+
+	h4 {
+		opacity: 0.64;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		width: 50%;
+		max-width: 330px;
+	}
+
+	//Visibility animation
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+	left: -100px;
+
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		transition: 0.5s;
+		left:0;
+	}
+}
+

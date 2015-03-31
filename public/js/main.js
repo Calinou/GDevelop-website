@@ -10,6 +10,26 @@ $(document).ready(function(){
 	    return false;
 	});
 
+	//Side menu show/hide
+	var sideMenu = $(".side-menu");
+	var sideMenuButton = $('.side-menu-button button');
+	sideMenuButton.click(function() {
+		if (!sideMenu.hasClass('visible')) {
+			window.showMenu();
+		} else {
+			window.hideMenu();
+		}
+	});
+
+	window.showMenu = function() {
+		sideMenu.addClass('visible');
+		sideMenuButton.addClass('active');
+	}
+	window.hideMenu = function() {
+		sideMenu.removeClass('visible');
+		sideMenuButton.removeClass('active');
+	}
+
 	//Carousels
 	$('.games-carousel').slick({
 		centerMode: true,
@@ -59,6 +79,7 @@ $(document).ready(function(){
 	}
 });
 
+//Track downloads:
 var downloaded = false;
 function onWinDl(alternateDl) {
 	if (downloaded) return;
