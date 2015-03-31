@@ -1,6 +1,6 @@
 .side-menu-button {
 	position: fixed;
-	top: 10px;
+	top: 30px;
 	left: 10px;
 	opacity: 0.80;
 	z-index: 21;
@@ -8,12 +8,16 @@
 	&:hover {
 		opacity: 1;
 	}
+
+	@media (min-width: $screen-sm-min) {
+		top: 10px; //No need for extra margin on desktop
+	}
 }
 
 .side-menu {
 	position: fixed;
 	width: 90%;
-	height: 100vh;
+	height: 120vh;
 	min-height: 300px;
     overflow-y: auto;
 	z-index: 20;

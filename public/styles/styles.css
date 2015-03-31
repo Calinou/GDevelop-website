@@ -493,7 +493,7 @@ footer p {
 
 .side-menu-button {
   position: fixed;
-  top: 10px;
+  top: 30px;
   left: 10px;
   opacity: 0.80;
   z-index: 21;
@@ -501,11 +501,16 @@ footer p {
 .side-menu-button:hover {
   opacity: 1;
 }
+@media (min-width: 992px) {
+  .side-menu-button {
+    top: 10px;
+  }
+}
 
 .side-menu {
   position: fixed;
   width: 90%;
-  height: 100vh;
+  height: 120vh;
   min-height: 300px;
   overflow-y: auto;
   z-index: 20;
