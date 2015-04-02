@@ -85,7 +85,8 @@ function onWinDl(alternateDl) {
 	if (downloaded) return;
 	downloaded = true;
 
-	window.ga('send', 'event', "download-en", "click", "win", alternateDl ? "archive" : "installer");
+	console.log("Windows", alternateDl);
+	window.ga('send', 'event', "download-en", "click", "win-" + (alternateDl ? "archive" : "installer"));
 }
 
 function onUbuntuDl() {
@@ -101,7 +102,7 @@ function onLinuxDl(flavour) {
 	downloaded = true;
 
 	console.log("Linux", flavour);
-	window.ga('send', 'event', "download-en", "click", "linux", flavour);
+	window.ga('send', 'event', "download-en", "click", "linux-"+flavour);
 }
 
 function onOSXDl() {

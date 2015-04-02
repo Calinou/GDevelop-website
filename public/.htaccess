@@ -1,0 +1,9 @@
+AddHandler x-mapp-php6 .php .htm
+<Files news.txt>
+	AddHandler x-mapp-php6 .txt
+</Files>
+
+<Files gdstats.db>
+  order allow,deny
+  deny from all
+</Files>
