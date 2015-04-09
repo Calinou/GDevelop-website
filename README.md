@@ -5,28 +5,40 @@ This is the repository for the new website for **[GDevelop](http://www.compilgam
 
 Any contribution, design or wording enhancements is welcome! Open issues if you having anything to say or, even better, submit a pull request. You can also discuss with the community on **[GDevelop forums](http://forum.compilgames.net)**.
 
+If you want to **translate the website to your language**, just go on [the Crowdin translation project](https://crowdin.com/project/gdevelop-website)!
+
 ## Development
+
+Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for managing front-end dependencies, EJS templates files are used to write the pages and gulp is used to launch tasks.
 
 ### Installation
 
-Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for managing front-end dependencies and grunt is used to launch tasks.
-
     npm install -g bower
-    npm install -g grunt-cli
+    npm install -g gulp
     npm install
     bower install
 
 ### Workflow
 
-To update main.html with bower dependencies, compile stylesheets and javascript files, launch grunt:
+To generate HTML pages from .ejs files, with bower dependencies, compiled stylesheets and javascript files, launch gulp:
 
-    grunt
+    gulp
 
-A grunt *watch* task is available that monitor any changes to the .js or .scss files:
+A gulp *watch* task is available that monitors any changes to the .ejs, .js or .scss files:
 
-    grunt watch
+    gulp watch
 
-Simply open main.html to see the website. Language redirections is handled by index.php (require that you access to this file using a PHP server)
+Simply open main.html to see the website. Language redirections is handled by index.php (require that you access to this file using a PHP server).
+
+### Updating translations
+
+In .ejs files, make sure that any string to be translated is wrapped inside a call to `_` function (this mimics gettext way of marking strings to translate):
+
+    <p><%= _('Text to translate') %></p>
+
+ * Update *locale/catalog.json* by running `gulp update-translation`.
+ * The *catalog.json* should then be uploaded to the [the Crowdin translation project](https://crowdin.com/project/gdevelop-website) by the project administrator.
+ * To update the translations, build the project on the Crowdin page, download the archive and replace *.json* files in *locale* directory by the ones contained in the archive.
 
 ## License
 

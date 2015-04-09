@@ -1,0 +1,5 @@
+<%
+	var catalog = getCatalog(__filename);
+	var _ = function(str) { return translate(catalog, str) };
+%>
+<% include main.ejs %>

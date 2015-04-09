@@ -1,24 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en" class="no-textshadow">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Open source game creation software: No programming or coding is required! Make HTML5 and natives games for Windows, Linux (Ubuntu) and Mac OS X. Quickly build and share your games on mobile (Android and iOS) and on the web." />
+    <meta name="description" content="<%= _('Open source game creation software: No programming or coding is required! Make HTML5 and natives games for Windows, Linux (Ubuntu) and Mac OS X. Quickly build and share your games on mobile (Android and iOS) and on the web.') %>" />
     <meta keywords="GDevelop, game, game development tool, creation, making, open source, free, coding, build, programming, drag'n'drop, 2D game engine, html5 game engine, engine, GameDevelop, develop, windows game engine, 2D, Linux, Ubuntu, Windows, OS X, Html5, isometric, 2.5D, html5 game development tool, free game engine, free game development tool, easy, easy game, development tool, no programming required, event system, beginner, advanced, system tool, engine, built in scene editor"/>
 
     <link rel="canonical" href="http://compilgames.net" />
     <link rel="shortcut icon" href="favicon.ico" />
 
 
-    <title>GDevelop - Create games without programming - Open source HTML5 and native game creator</title>
+    <title><%= _('GDevelop - Create games without programming - Open source HTML5 and native game creator') %></title>
 
     <!-- bower:css -->
-    <link rel='stylesheet' href='../public/bower_components/bootstrap/dist/css/bootstrap.css' />
-    <link rel='stylesheet' href='../public/bower_components/normalize.css/normalize.css' />
-    <link rel='stylesheet' href='../public/bower_components/slick.js/slick/slick.css' />
-    <link rel='stylesheet' href='../public/bower_components/slick.js/slick/slick-theme.css' />
     <!-- endbower -->
     <link rel="stylesheet" href="assets/flags/flag-icon.min.css" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -49,27 +44,27 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="side-menu-button">
-      <button class="btn btn-info btn-lg">☰ Menu</button>
+      <button class="btn btn-info btn-lg">☰ <%= _('Menu') %></button>
     </div>
 
     <div class="side-menu">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h4>Community</h4>
+            <h4><%= _('Community') %></h4>
             <ul>
-              <li><a href="http://forum.compilgames.net" class="btn btn-primary">Forum</a></li>
-              <li><a href="http://wiki.compilgames.net" class="btn btn-primary">Wiki &amp; tutorials</a></li>
+              <li><a href="http://forum.compilgames.net" class="btn btn-primary"><%= _('Forum') %></a></li>
+              <li><a href="http://wiki.compilgames.net" class="btn btn-primary"><%= _('Wiki & tutorials') %></a></li>
             </ul>
-            <h4>Contribute - <i>we need you!</i></h4>
+            <h4><%= _('Contribute') %> - <i><%= _('we need you!') %></i></h4>
             <ul>
-              <li><a href="https://github.com/4ian/GD" target="_blank"  class="btn btn-primary">GitHub page</a></li>
-              <li><a href="https://trello.com/b/qf0lM7k8/gdevelop-roadmap"  target="_blank" class="btn btn-primary">Roadmap</a></li>
-              <li><a href="https://crowdin.com/project/gdevelop" target="_blank" class="btn btn-primary">Translations</a></li>
+              <li><a href="https://github.com/4ian/GD" target="_blank"  class="btn btn-primary"><%= _('GitHub page') %></a></li>
+              <li><a href="https://trello.com/b/qf0lM7k8/gdevelop-roadmap"  target="_blank" class="btn btn-primary"><%= _('Roadmap') %></a></li>
+              <li><a href="https://crowdin.com/project/gdevelop" target="_blank" class="btn btn-primary"><%= _('Translations') %></a></li>
             </ul>
-            <h4>GDevelop based web app</h4>
+            <h4><%= _('GDevelop based web app') %></h4>
             <ul>
-              <li><a href="https://gdevapp.com" target="_blank" class="btn btn-primary">Try GDevApp</a></li>
+              <li><a href="https://gdevapp.com" target="_blank" class="btn btn-primary"><%= _('Try GDevApp') %></a></li>
             </ul>
           </div>
         </div>
@@ -79,13 +74,13 @@
     <!-- Bottom right navigation bar -->
     <div class="nav-page sections-list">
       <ul class="nav nav-tabs nav-stacked">
-          <li class="active"><a href="#home">GDevelop</a></li>
-          <li><a href="#events" role="section-link">Events</a></li>
-          <li><a href="#html5-and-native" role="section-link">HTML5 &lt;br&gt;&amp;amp; native games</a></li>
-          <li><a href="#features" role="section-link">Features</a></li>
-          <li><a href="#open-source-multilanguage" role="section-link">Open source <br>&amp; multilanguage</a></li>
-          <li><a href="#games-gallery" role="section-link">Games gallery</a></li>
-          <li><a href="#download" role="section-link">Download</a></li>
+          <li class="active"><a href="#home"><%= _('GDevelop') %></a></li>
+          <li><a href="#events" role="section-link"><%= _('Events') %></a></li>
+          <li><a href="#html5-and-native" role="section-link"><%= _('HTML5 <br>&amp; native games') %></a></li>
+          <li><a href="#features" role="section-link"><%= _('Features') %></a></li>
+          <li><a href="#open-source-multilanguage" role="section-link"><%- _('Open source <br>&amp; multilanguage') %></a></li>
+          <li><a href="#games-gallery" role="section-link"><%= _('Games gallery') %></a></li>
+          <li><a href="#download" role="section-link"><%= _('Download') %></a></li>
       </ul>
     </div>
 
@@ -93,15 +88,15 @@
     <div class="section-landing section-color-dark" id="home">
       <div class="centered-banner">
         <div class="titles">
-          <h1>Create your own games!</h1>
-          <h2>GDevelop is an <span class="foss">open source</span>, <span class="cp">cross-platform</span> game creator designed to be used by <span class="everyone">everyone</span> - no programming skills required.</h2>
+          <h1><%= _('Create your own games!') %></h1>
+          <h2><%- _('GDevelop is an <span class="foss">open source</span>, <span class="cp">cross-platform</span> game creator designed to be used by <span class="everyone">everyone</span> - no programming skills required.') %></h2>
         </div>
         <div class="row">
           <div class="col-md-offset-3 col-md-3">
-            <a href="#download" class="btn btn-lg btn-primary" role="section-link">Download</a>
+            <a href="#download" class="btn btn-lg btn-primary" role="section-link"><%= _('Download') %></a>
           </div>
           <div class="col-md-3">
-            <a href="#events" class="btn btn-lg btn-info" role="section-link">Learn more</a>
+            <a href="#events" class="btn btn-lg btn-info" role="section-link"><%= _('Learn more') %></a>
           </div>
         </div>
       </div>
@@ -620,13 +615,7 @@
     </script>
 
     <!-- bower:js -->
-    <script src="../public/bower_components/modernizr/modernizr.js"></script>
-    <script src="../public/bower_components/jquery/dist/jquery.js"></script>
-    <script src="../public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../public/bower_components/slick.js/slick/slick.min.js"></script>
-    <script src="../public/bower_components/platform/platform.js"></script>
     <!-- endbower -->
     <script src="js/main.js"></script>
   </body>
 </html>
-
