@@ -36,38 +36,41 @@ gulp.task('uglify', function () {
  * Create HTML files from .ejs files
  */
 gulp.task('ejs', function () {
-	gulp.src('src/*-*.ejs')
-	    .pipe(ejs({
-	    	getCatalog: function(ejsFilename) {
-	    		var lang = path.basename(ejsFilename);
-	    		lang = lang.substring(lang.lastIndexOf("-")+1,lang.lastIndexOf("."));
-	    		console.log(lang);
-	    		if (lang === 'en') return {}; //All strings are already in english
+	var langs = getAvailableLanguagesCatalogs();
+	gutil.log("Found these languages catalogs (with translation ratio >0.7): ", langs);
 
-	    		var catalogFile = './locale/' + lang + '.json'
-	    		if (!fs.existsSync(catalogFile)) {
-	    			gutil.log("No catalog file " + catalogFile + " found for " + ejsFilename);
-	    			return {};
-	    		}
+	//A separate gulp stream must be launched for generating html files
+	//for each language.
+	for(var i = 0;i<langs.length;++i) {
+		(function(langCode) {
 
-	    		return require(catalogFile);
-	    	},
-	    	//The EJS helper function to be used to wrap any string to be translated
-	    	translate: function(catalog, str) {
-		    	if (catalog.hasOwnProperty(str)) {
-		    		return catalog[str];
-		    	}
+			//Open the language catalog
+    		var catalog = langCode == "en" ? "" : require('./locale/' + langCode + '.json');
 
-		    	return str;
-		    }
-		}).on('error', gutil.log))
-		.pipe(wiredep())
-		.pipe(rename(function(path) {
-			if (path.basename === "main-en") {
-				path.basename = "main";
-			}
-		}))
-	    .pipe(gulp.dest('public'));
+    		//Launch a stream for generating the .ejs file for this language
+			gulp.src('src/*.ejs')
+			.on('end', function() {
+				gutil.log("Ended generating " + langCode + " files from .ejs sources")
+			})
+		    .pipe(ejs({
+		    	//The EJS helper function to be used to wrap any string to be translated
+		    	_: function(str) {
+			    	if (catalog.hasOwnProperty(str)) {
+			    		return catalog[str];
+			    	}
+
+			    	return str;
+			    }
+			}).on('error', gutil.log))
+			.pipe(wiredep())
+			.pipe(rename(function(path) {
+				if (langCode !== "en") {
+					path.basename += "-" + langCode;
+				}
+			}))
+		    .pipe(gulp.dest('public'));
+	   })(langs[i]);
+	}
 });
 
 /**
@@ -76,7 +79,7 @@ gulp.task('ejs', function () {
 gulp.task('update-translation', function () {
 	var allStrings = {};
 
-	gulp.src('public/main.ejs')
+	gulp.src('src/*.ejs')
 		.on('end', function() {
 			fs.writeFile('locale/catalog.json', JSON.stringify(allStrings, null, 4), function(err) {
 			    if(err) {
@@ -102,3 +105,41 @@ gulp.task('watch', function () {
     gulp.watch('src/js/*.js', ['uglify']);
     gulp.watch(['src/*.ejs', 'locale/*.json'], ['ejs']);
 });
+
+/**
+ * Return a list of language name corresponding to catalogs .json files stored
+ * in locale directory, with a translation ratio that is high enough.
+ */
+function getAvailableLanguagesCatalogs() {
+	var availableLangs = ["en"];
+
+	fs.readdirSync('locale').forEach(function(file) {
+		if (path.basename(file) === "catalog.json" ||
+			path.extname(file) !== ".json")
+			return;
+
+		var ratio = getTranslatedRatio(require('./locale/' + file));
+		if (ratio > 0.7) availableLangs.push(path.basename(file, ".json"));
+	});
+
+	return availableLangs;
+}
+
+/**
+ * Return the total number of keys that differs from their values
+ * in the specified object.
+ */
+function getTranslatedRatio(catalog) {
+	var translatedCount = 0;
+	var totalCount = 0;
+	for (var p in catalog) {
+		if (catalog.hasOwnProperty(p)) {
+			if (p !== catalog[p]) {
+				translatedCount++;
+			}
+			totalCount++;
+		}
+	}
+
+	return translatedCount/totalCount;
+}

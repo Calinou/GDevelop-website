@@ -9,7 +9,9 @@ If you want to **translate the website to your language**, just go on [the Crowd
 
 ## Development
 
-Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for managing front-end dependencies, EJS templates files are used to write the pages and gulp is used to launch tasks.
+Ensure you have [Node.js](https://nodejs.org) installed. Bower is used for managing front-end dependencies, EJS templates files are used to write the pages and gulp is used to launch tasks. 
+
+Translations are stored into *locale* directory, in plain JSON files. Internationalized files (for example, main-fr.html for main.ejs) are automatically build for each language with a catalog which has a high translation ratio (>70% translated strings).
 
 ### Installation
 

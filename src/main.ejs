@@ -76,7 +76,7 @@
       <ul class="nav nav-tabs nav-stacked">
           <li class="active"><a href="#home"><%= _('GDevelop') %></a></li>
           <li><a href="#events" role="section-link"><%= _('Events') %></a></li>
-          <li><a href="#html5-and-native" role="section-link"><%= _('HTML5 <br>&amp; native games') %></a></li>
+          <li><a href="#html5-and-native" role="section-link"><%- _('HTML5 <br>&amp; native games') %></a></li>
           <li><a href="#features" role="section-link"><%= _('Features') %></a></li>
           <li><a href="#open-source-multilanguage" role="section-link"><%- _('Open source <br>&amp; multilanguage') %></a></li>
           <li><a href="#games-gallery" role="section-link"><%= _('Games gallery') %></a></li>
@@ -108,12 +108,12 @@
     <div class="section-events" id="events">
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>Events</h4>
+          <h4><%= _('Events') %></h4>
         </div>
       </div>
       <div class="row explanation-row">
         <div class="col-md-5 text-center">
-          <p>What makes GDevelop unique and so easy to use are the events. Events are a powerful way to express the logic of your game, without having to learn a programming language.</p>
+          <p><%= _('What makes GDevelop unique and so easy to use are the events. Events are a powerful way to express the logic of your game, without having to learn a programming language.') %></p>
         </div>
       </div>
       <div class="row example-row">
@@ -121,10 +121,10 @@
           <div class="well">
             <div class="row">
               <div class="col-md-6 text-center">
-                <img src="assets/events.png" class="img-responsive" alt="Events are composed of conditions, on the left, and actions that are run when conditions are fulfilled" />
+                <img src="assets/events.png" class="img-responsive" alt="<%= _('Events are composed of conditions, on the left, and actions that are run when conditions are fulfilled') %>" />
               </div>
               <div class="col-md-6 text-center">
-                <p>When Space is pressed, the character animation and a sound are played. If a bomb touches the character, they are both destroyed.</p>
+                <p><%= _('When Space is pressed, the character animation and a sound are played. If a bomb touches the character, they are both destroyed.') %></p>
               </div>
             </div>
           </div>
@@ -138,14 +138,14 @@
     <div class="section-html5-native section-color-dark" id="html5-and-native">
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>HTML5 &amp; native games</h4>
+          <h4><%= _('HTML5 & native games') %></h4>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>GDevelop flexible architecture allows you to choose if you want to create an <b>HTML5 game</b> that can be played on the web and exported to Android, or a <b>native game</b> for your operating system. Or activate both platforms and export your game everywhere!</p>
+          <p><%- _('GDevelop flexible architecture allows you to choose if you want to create an <b>HTML5 game</b> that can be played on the web and exported to Android, or a <b>native game</b> for your operating system. Or activate both platforms and export your game everywhere!') %></p>
         </div>
-        <img src="assets/phone-with-game.png" alt="Create games for Android and iOS without programming" class="phone-game" />
+        <img src="assets/phone-with-game.png" alt="<%= _('Create games for Android and iOS without programming') %>" class="phone-game" />
       </div>
       <div class="chrome-game"></div>
       <a href="#features" role="section-link" class="scroll-down"><i class="fa fa-angle-down"></i></a>
@@ -155,51 +155,51 @@
     <div class="section-features section-color-dark" id="features">
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>Features</h4>
+          <h4><%= _('Features') %></h4>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>GDevelop features are provided thanks to extensions, allowing you to embed into your game just what you need. Here is a short list of what you get when using GD!</p>
+          <p><%= _('GDevelop features are provided thanks to extensions, allowing you to embed into your game just what you need. Here is a short list of what you get when using GD!') %></p>
         </div>
       </div>
       <div class="row feature-row">
         <div class="col-md-offset-1 col-md-11">
-          <h4>Tons of objects ready to be used</h4>
-          <p>Sprites with multiple animations</p>
-          <p>"9 patch" and tiled sprites</p>
-          <p>Text objects</p>
-          <p>3D boxes <span class="badge">for native games</span></p>
-          <p>Draw your own shape on screen with the Shape Painter</p>
-          <p>Particle engine <span class="badge">for native games</span></p>
-          <p>Make RPG-like maps with the Tiled map objects <span class="badge">for native games</span></p>
-          <p>Dynamic lights and shadows <span class="badge">for native games</span></p>
-          <p>Support for custom collision masks</p>
+          <h4><%= _('Tons of objects ready to be used') %></h4>
+          <p><%= _('Sprites with multiple animations') %></p>
+          <p><%= _('"9 patch" and tiled sprites') %></p>
+          <p><%= _('Text objects') %></p>
+          <p><%= _('3D boxes') %> <span class="badge"><%= _('for native games') %></span></p>
+          <p><%= _('Draw your own shape on screen with the Shape Painter') %></p>
+          <p><%= _('Particle engine') %> <span class="badge"><%= _('for native games') %></span></p>
+          <p><%= _('Make RPG-like maps with the Tiled map objects') %> <span class="badge"><%= _('for native games') %></span></p>
+          <p><%= _('Dynamic lights and shadows') %> <span class="badge"><%= _('for native games') %></span></p>
+          <p><%= _('Support for custom collision masks') %></p>
 
-          <h4>Quickly add behaviors to your objects</h4>
-          <p>Physics engine <span class="text-muted">- Add a realistic behavior to your objects</span></p>
-          <p>Pathfinding <span class="text-muted">to move objects avoiding obstacles</span></p>
-          <p>Top-down movement</p>
-          <p>Platformer engine <span class="text-muted">- create platformer games in a breeze</span></p>
-          <p>Draggable objects <span class="text-muted">- quickly make your objects draggable with mouse/touch</span></p>
-          <p>And more, to automate current tasks and behaviors in a few clicks!</p>
+          <h4><%= _('Quickly add behaviors to your objects') %></h4>
+          <p><%= _('Physics engine') %> <span class="text-muted"><%= _('- Add a realistic behavior to your objects') %></span></p>
+          <p><%= _('Pathfinding') %> <span class="text-muted"><%= _('to move objects avoiding obstacles') %></span></p>
+          <p><%= _('Top-down movement') %></p>
+          <p><%= _('Platformer engine') %> <span class="text-muted"><%= _('- create platformer games in a breeze') %></span></p>
+          <p><%= _('Draggable objects') %> <span class="text-muted"><%= _('- quickly make your objects draggable with mouse/touch') %></span></p>
+          <p><%= _('And more, to automate current tasks and behaviors in a few clicks!') %></p>
 
-          <h4>Design advanced levels and interfaces</h4>
-          <p>The scene editor let you visually edit your levels</p>
-          <p>Multiple layers support <span class="text-muted">- Add interfaces and create parallax effects</span></p>
-          <p>Create dynamically your levels with external layouts</p>
-          <p>Integrated debugger and performance profilers <span class="badge">for native games</span></p>
+          <h4><%= _('Design advanced levels and interfaces') %></h4>
+          <p><%= _('The scene editor let you visually edit your levels') %></p>
+          <p><%= _('Multiple layers support') %> <span class="text-muted"><%= _('- Add interfaces and create parallax effects') %></span></p>
+          <p><%= _('Create dynamically your levels with external layouts') %></p>
+          <p><%= _('Integrated debugger and performance profilers') %> <span class="badge"><%= _('for native games') %></span></p>
 
-          <h4>Make desktop &amp; mobile ready games</h4>
-          <p>Save player data with HTML5 &amp; native storage</p>
-          <p>Full support for sounds effects and musics</p>
-          <p>Joystick and full keyboard support <span class="badge">for native games</span></p>
-          <p>Touchscreens support with multitouch <span class="badge">for HTML5 games</span></p>
+          <h4><%= _('Make desktop & mobile ready games') %></h4>
+          <p><%= _('Save player data with HTML5 & native storage') %></p>
+          <p><%= _('Full support for sounds effects and musics') %></p>
+          <p><%= _('Joystick and full keyboard support') %> <span class="badge"><%= _('for native games') %></span></p>
+          <p><%= _('Touchscreens support with multitouch') %> <span class="badge"><%= _('for HTML5 games') %></span></p>
 
-          <h4>Build ambitious games with advanced features</h4>
-          <p>Communicate with external websites using HTTP requests</p>
-          <p>Use advanced events: loops, foreach <span class="text-muted">and even functions</span></p>
-          <p>Manipulate variables with arbitrary complex structures <span class="text-muted">and even JSON support</span></p>
+          <h4><%= _('Build ambitious games with advanced features') %></h4>
+          <p><%= _('Communicate with external websites using HTTP requests') %></p>
+          <p><%= _('Use advanced events: loops, foreach') %> <span class="text-muted"><%= _('and even functions') %></span></p>
+          <p><%- _('Manipulate variables with arbitrary complex structures') %> <span class="text-muted"><%= _('and even JSON support') %></span></p>
         </div>
       </div>
       <!--<a href="#open-source-multilanguage" role="section-link" class="scroll-down"><i class="fa fa-angle-down"></i></a>-->
@@ -208,7 +208,7 @@
     <div class="section-feedback section-color-dark">
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>What people say</h4>
+          <h4><%= _('What people say') %></h4>
         </div>
       </div>
       <div class="row">
@@ -267,7 +267,7 @@
       </div>
       <div class="row explanation-row">
         <div class="col-md-offset-2 col-md-8 text-center">
-          <p class="small text-muted">These feedbacks are a source of motivation for us, developers of GDevelop. Do not hesitate to send us what you think of GDevelop after trying it!</p>
+          <p class="small text-muted"><%= _('These feedbacks are a source of motivation for us, developers of GDevelop. Do not hesitate to send us what you think of GDevelop after trying it!') %></p>
         </div>
       </div>
     </div>
@@ -276,38 +276,38 @@
     <div class="section-foss" id="open-source-multilanguage">
       <div class="row title-row opensource-title">
         <div class="col-md-12">
-          <h4>Open source &amp; multilanguage</h4>
+          <h4><%= _('Open source & multilanguage') %></h4>
         </div>
       </div>
       <div class="row foss-explanation-row">
         <div class="col-md-12 text-center">
-          <p>GDevelop is open source (even <a href="https://github.com/4ian/GDevelop-website" target="_blank">this website</a>): anyone can contribute and improve the software! Your games are also based on robust, free &amp; open source technologies.</p>
+          <p><%- _('GDevelop is open source (even <a href="https://github.com/4ian/GDevelop-website" target="_blank">this website</a>): anyone can contribute and improve the software! Your games are also based on robust, free &amp; open source technologies.') %></p>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-offset-2 col-md-4">
-          <a href="https://github.com/4ian/GD" target="_blank" class="btn btn-lg btn-primary">Contribute on GitHub</a>
+          <a href="https://github.com/4ian/GD" target="_blank" class="btn btn-lg btn-primary"><%= _('Contribute on GitHub') %></a>
         </div>
         <div class="col-md-4 text-center">
-          <a href="https://trello.com/b/qf0lM7k8/gdevelop-roadmap" target="_blank" class="btn btn-lg btn-info">Check the development roadmap</a>
+          <a href="https://trello.com/b/qf0lM7k8/gdevelop-roadmap" target="_blank" class="btn btn-lg btn-info"><%= _('Check the development roadmap') %></a>
         </div>
       </div>
       <div class="well">
         <div class="row">
           <div class="col-md-12 text-center">
-            <p>GDevelop is built from the ground to be translated into any language.</a>
+            <p><%= _('GDevelop is built from the ground to be translated into any language.') %></p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 text-center">
-            <p>It's already available in:</p>
+            <p><%= _('It\'s already available in:') %></p>
             <span class="flag-icon flag-icon-gb"></span>
             <span class="flag-icon flag-icon-fr"></span>
             <span class="flag-icon flag-icon-ru"></span>
             <span class="flag-icon flag-icon-es"></span>
           </div>
           <div class="col-md-6 text-center">
-            <p>And translation are currently being made for:</p>
+            <p><%= _('And translation are currently being made for:') %></p>
             <span class="flag-icon flag-icon-pl"></span>
             <span class="flag-icon flag-icon-pt"></span>
             <span class="flag-icon flag-icon-de"></span>
@@ -315,7 +315,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <a href="https://crowdin.com/project/gdevelop" target="_blank" class="btn btn-lg btn-primary">Help to translate GDevelop!</a>
+            <a href="https://crowdin.com/project/gdevelop" target="_blank" class="btn btn-lg btn-primary"><%= _('Help to translate GDevelop!') %></a>
           </div>
         </div>
       </div>
@@ -327,7 +327,7 @@
     <div class="section-gallery section-color-dark" id="games-gallery">
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>Games created with GDevelop</h4>
+          <h4><%= _('Games created with GDevelop') %></h4>
         </div>
       </div>
       <div class="row">
@@ -336,120 +336,120 @@
             <div>
               <img src="assets/games-gallery/big_megapanicpixel.jpg" class="game-screenshot" alt="Mega Panic Pixel, a game created without programming with GDevelop">
               <h3>Mega Panic Pixel</h3>
-              <h4>by NanoSoft</h4>
-              <a href="http://gamejolt.com/games/arcade/mega-panic-pixel-alpha-wip/42664/" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> NanoSoft</h4>
+              <a href="http://gamejolt.com/games/arcade/mega-panic-pixel-alpha-wip/42664/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_iletait.png" class="game-screenshot" alt="Il etait..., a game created without programming with GDevelop">
               <h3>Il etait...</h3>
-              <h4>by Vivet, Bravo &amp; Corbel</h4>
-              <a href="http://www.witly.fr/portfolio/html5gamejam/" target="_blank" class="btn btn-default btn-primary btn-lg">Play</a>
+              <h4><%= _('by') %> Vivet, Bravo &amp; Corbel</h4>
+              <a href="http://www.witly.fr/portfolio/html5gamejam/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_driftroads.jpg" class="game-screenshot" alt="Drift Roads, a game created without programming with GDevelop">
               <h3>Drift Roads</h3>
-              <h4>by donut_prod</h4>
-              <a href="http://www.fdumortier.com/games/Drift Roads.zip" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> donut_prod</h4>
+              <a href="http://www.fdumortier.com/games/Drift Roads.zip" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_euf.jpg" class="game-screenshot" alt="Eternity Under Fire, a game created without programming with GDevelop">
               <h3>Eternity Under Fire</h3>
-              <h4>by 4ian</h4>
-              <a class="btn btn-default btn-primary btn-lg">Bundled with GD!</a>
+              <h4><%= _('by') %> 4ian</h4>
+              <a class="btn btn-default btn-primary btn-lg"><%= _('Bundled') %> with GD!</a>
             </div>
             <div>
               <img src="assets/games-gallery/big_tva.png" class="game-screenshot" alt="Tank Versus Alien, a game created without programming with GDevelop">
               <h3>Tank Versus Alien</h3>
-              <h4>by JohNy</h4>
-              <a href="http://tva.clay.io/" target="_blank" class="btn btn-default btn-primary btn-lg">Play</a>
+              <h4><%= _('by') %> JohNy</h4>
+              <a href="http://tva.clay.io/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_dix.png" class="game-screenshot" alt="DIX, a game created without programming with GDevelop">
               <h3>DIX</h3>
-              <h4>by TheFrogStudio.net</h4>
-              <a href="http://dix.thefrogstudio.net/" target="_blank" class="btn btn-default btn-primary btn-lg">Play</a>
+              <h4><%= _('by') %> TheFrogStudio.net</h4>
+              <a href="http://dix.thefrogstudio.net/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_bios.jpg" class="game-screenshot" alt="Blazing Inferno of Space, a game created without programming with GDevelop">
               <h3>Blazing Inferno of Space</h3>
-              <h4>by MillionthVector</h4>
-              <a href="http://www.compilgames.net/dl/BIoS.zip" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> MillionthVector</h4>
+              <a href="http://www.compilgames.net/dl/BIoS.zip" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_eccedeus.jpg" class="game-screenshot" alt="Ecce Deus, a game created without programming with GDevelop">
               <h3>Ecce Deus</h3>
-              <h4>by 4ian</h4>
-              <a href="http://www.compilgames.net/eccedeus" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> 4ian</h4>
+              <a href="http://www.compilgames.net/eccedeus" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_bzombies.jpg" class="game-screenshot" alt="Bloody Zombies, a game created without programming with GDevelop">
               <h3>Bloody Zombies</h3>
-              <h4>by donut_prod</h4>
-              <a href="http://www.fdumortier.com/games/Bloody zombies.exe" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> donut_prod</h4>
+              <a href="http://www.fdumortier.com/games/Bloody zombies.exe" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_mathepferd.jpg" class="game-screenshot" alt="Mathe Pferd, a game created without programming with GDevelop">
               <h3>Mathe Pferd</h3>
               <h4> </h4>
-              <a href="http://trancefer.wmw.cc/index.php/mathepferd" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <a href="http://trancefer.wmw.cc/index.php/mathepferd" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_minotaure.jpg" class="game-screenshot" alt="Minotaure, a game created without programming with GDevelop">
               <h3>Minotaure</h3>
-              <h4>by Juhlenedni</h4>
+              <h4><%= _('by') %> Juhlenedni</h4>
             </div>
             <div>
               <img src="assets/games-gallery/big_run.png" class="game-screenshot" alt="Run, a game created without programming with GDevelop">
               <h3>Run</h3>
-              <h4>by graphichorse</h4>
-              <a href="http://www.graphichorsegames.com/p/run.html" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> graphichorse</h4>
+              <a href="http://www.graphichorsegames.com/p/run.html" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_stg.png" class="game-screenshot" alt="Super Thomas Galaxy, a game created without programming with GDevelop">
               <h3>Super Thomas Galaxy</h3>
-              <h4>by Blady and ThomasCVB</h4>
-              <a href="http://www.blady.fr/jeux/stg/" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> Blady and ThomasCVB</h4>
+              <a href="http://www.blady.fr/jeux/stg/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_gleamy.png" class="game-screenshot" alt="Gleamy, a game created without programming with GDevelop">
               <h3>Gleamy</h3>
-              <h4>by livekontesk</h4>
-              <a href="http://www.compilgames.net/dl/hosted/gleamy_demo.rar" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> livekontesk</h4>
+              <a href="http://www.compilgames.net/dl/hosted/gleamy_demo.rar" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_modelo.png" class="game-screenshot" alt="Modelo, a game created without programming with GDevelop">
               <h3>Modelo</h3>
-              <h4>by AjidoDm</h4>
-              <a href="http://www.compilgames.net/dl/hosted/Modelo.exe" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> AjidoDm</h4>
+              <a href="http://www.compilgames.net/dl/hosted/Modelo.exe" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_pixelblack.jpg" class="game-screenshot" alt="Pixel Black, a game created without programming with GDevelop">
               <h3>Pixel Black</h3>
-              <h4>by EMKBRO</h4>
-              <a href="http://gamejolt.com/games/platformer/pixelblack/44361/" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> EMKBRO</h4>
+              <a href="http://gamejolt.com/games/platformer/pixelblack/44361/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_astral.png" class="game-screenshot" alt="Astral Masane, a game created without programming with GDevelop">
               <h3>Astral Masane</h3>
-              <h4>by Blady and ThomasCVB</h4>
-              <a href="http://www.blady.fr/jeux/astralmasane/" target="_blank" class="btn btn-default btn-primary btn-lg">Download</a>
+              <h4><%= _('by') %> Blady and ThomasCVB</h4>
+              <a href="http://www.blady.fr/jeux/astralmasane/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Download') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_burgersenfolie.jpg" class="game-screenshot" alt="Key To Nowhere, a game created without programming with GDevelop">
               <h3>Burgers en folie</h3>
-              <h4>by Fax</h4>
-              <a href="http://www.terre-et-glace.com/projets/Burgers%20En%20Folie/jeu/html" target="_blank" class="btn btn-default btn-primary btn-lg">Play</a>
+              <h4><%= _('by') %> Fax</h4>
+              <a href="http://www.terre-et-glace.com/projets/Burgers%20En%20Folie/jeu/html" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
             <div>
               <img src="assets/games-gallery/big_keytonowhere.jpg" class="game-screenshot" alt="Key To Nowhere, a game created without programming with GDevelop">
               <h3>Key To Nowhere</h3>
-              <h4>by Ricardo Graca</h4>
-              <a href="http://rizomatico.org/games/keytonowhere/" target="_blank" class="btn btn-default btn-primary btn-lg">Play</a>
+              <h4><%= _('by') %> Ricardo Graca</h4>
+              <a href="http://rizomatico.org/games/keytonowhere/" target="_blank" class="btn btn-default btn-primary btn-lg"><%= _('Play') %></a>
             </div>
           </div>
         </div>
       </div>
-      <p class="your-game">...and maybe your next game here?</p>
+      <p class="your-game"><%= _('...and maybe your next game here?') %></p>
       <div class="background"></div>
       <a href="#download" role="section-link" class="scroll-down"><i class="fa fa-angle-down"></i></a>
     </div>
@@ -458,8 +458,8 @@
     <div class="section-download" id="download">
       <div class="row title-row">
         <div class="col-md-12">
-          <h4>Download GDevelop</h4>
-          <p class="text-muted text-center small">You'll soon be creating your own games without programming!</p>
+          <h4><%= _('Download GDevelop') %></h4>
+          <p class="text-muted text-center small"><%= _('You\'ll soon be creating your own games without programming!') %></p>
         </div>
       </div>
       <div class="row">
@@ -469,10 +469,10 @@
             <ul class="nav nav-tabs" role="tablist">
               <li role="presentation" class="active"><a href="#win-dl" aria-controls="win-dl" role="tab" data-toggle="tab">Windows</a></li>
               <li role="presentation"><a href="#ubuntu-dl" aria-controls="ubuntu-dl" role="tab" data-toggle="tab">Ubuntu</a></li>
-              <li role="presentation"><a href="#linux-dl" aria-controls="linux-dl" role="tab" data-toggle="tab">Other linux</a></li>
+              <li role="presentation"><a href="#linux-dl" aria-controls="linux-dl" role="tab" data-toggle="tab"><%= _('Other linux') %></a></li>
               <li role="presentation"><a href="#osx-dl" aria-controls="osx-dl" role="tab" data-toggle="tab">Mac OS X</a></li>
               <li role="presentation"><a href="#gdevapp-link" aria-controls="gdevapp-link" role="tab" data-toggle="tab">iOS/Android</a></li>
-              <li role="presentation"><a href="#sources-dl" aria-controls="sources-dl" role="tab" data-toggle="tab">Sources</a></li>
+              <li role="presentation"><a href="#sources-dl" aria-controls="sources-dl" role="tab" data-toggle="tab"><%= _('Sources') %></a></li>
             </ul>
 
             <!-- Tab panes -->
@@ -480,11 +480,11 @@
               <div role="tabpanel" class="tab-pane fade in active" id="win-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p>Download and install GDevelop for Windows:</p>
+                    <p><%= _('Download and install GDevelop for Windows:') %></p>
                     <div class="row">
                       <div class="col-md-12">
-                        <a href="https://github.com/4ian/GD/releases/download/3.6.78/gd3678.exe" class="btn btn-default btn-primary btn-lg" onclick="onWinDl()">Download for Windows</a><br>
-                        <p class="small text-muted">also available <a href="https://github.com/4ian/GD/releases/download/3.6.78/gd3678.noinstaller.zip" onclick="onWinDl(true)">without installer</a></p>
+                        <a href="https://github.com/4ian/GD/releases/download/3.6.78/gd3678.exe" class="btn btn-default btn-primary btn-lg" onclick="onWinDl()"><%= _('Download for Windows') %></a><br>
+                        <p class="small text-muted"><%= _('also available') %> <a href="https://github.com/4ian/GD/releases/download/3.6.78/gd3678.noinstaller.zip" onclick="onWinDl(true)"><%= _('without installer') %></a></p>
                       </div>
                     </div>
                   </div>
@@ -493,42 +493,42 @@
               <div role="tabpanel" class="tab-pane fade" id="ubuntu-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p>Open a terminal by pressing <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.</p>
-                    <p>Then type (and press enter after each line):</p>
+                    <p><%= _('Open a terminal by pressing') %> <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.</p>
+                    <p><%= _('Then type (and press enter after each line):') %></p>
                     <p>
                       <kbd onclick="onUbuntuDl()">sudo add-apt-repository ppa:florian-rival/gdevelop</kbd><br>
                       <kbd>sudo apt-get update</kbd><br>
                       <kbd>sudo apt-get install gdevelop</kbd>
                     </p>
-                    <p>You're done! Type GDevelop in the launch search bar to start.</p>
+                    <p><%= _('You\'re done! Type GDevelop in the launch search bar to start.') %></p>
                   </div>
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="linux-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p>You can get GDevelop for:</p>
+                    <p><%= _('You can get GDevelop for:') %></p>
                     <div class="row">
                       <div class="col-md-6">
                         <a href="http://software.opensuse.org/download.html?project=home%3Avictorlevasseur&amp;package=gdevelop" class="btn btn-default btn-primary btn-lg" onclick="onLinuxDl('obs')">Fedora, Arch, OpenSuse</a>
                       </div>
                       <div class="col-md-6">
-                        <a href="https://aur.archlinux.org/packages/gdevelop-git/" class="btn btn-default btn-primary btn-lg" onclick="onLinuxDl('arch')">Arch <span class="small">(from sources)</span></a>
-                        <p class="small text-muted">This is an unofficial package</p>
+                        <a href="https://aur.archlinux.org/packages/gdevelop-git/" class="btn btn-default btn-primary btn-lg" onclick="onLinuxDl('arch')">Arch <span class="small"><%= _('(from sources)') %></span></a>
+                        <p class="small text-muted"><%= _('This is an unofficial package') %></p>
                       </div>
                     </div>
-                    <p>Remember that GDevelop is primarily <b>tested on Ubuntu</b>. Your feedback are welcome <a href="http://forum.compilgames.net">on the forum</a>.</p>
+                    <p><%- _('Remember that GDevelop is primarily <b>tested on Ubuntu</b>.') %> <%- _('Your feedback are welcome <a href="http://forum.compilgames.net">on the forum </a>.') %></p>
                   </div>
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="osx-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p>A <i>Beta</i> version of GDevelop for Mac OS X:</p>
+                    <p><%- _('A <i>Beta</i> version of GDevelop for Mac OS X:') %></p>
                     <div class="row">
                       <div class="col-md-12">
-                        <a href="http://forum.compilgames.net/viewtopic.php?f=18&amp;t=6283" class="btn btn-default btn-primary btn-lg" target="_blank" onclick="onOSXDl()">Download for OS X</a>
-                        <p class="small text-muted">This is a beta: bugs may be present and it could not work at all!</p>
+                        <a href="http://forum.compilgames.net/viewtopic.php?f=18&amp;t=6283" class="btn btn-default btn-primary btn-lg" target="_blank" onclick="onOSXDl()"><%= _('Download for OS X') %></a>
+                        <p class="small text-muted"><%= _('This is a beta: bugs may be present and it could not work at all!') %></p>
                       </div>
                     </div>
                     <!--<p>You can discuss and send your feedback about the OSX version <a href="http://forum.compilgames.net">on the forum</a>.</p>-->
@@ -538,19 +538,19 @@
               <div role="tabpanel" class="tab-pane fade" id="gdevapp-link">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p class="small text-muted">Unfortunately, for now GDevelop is a desktop application, but if you want to create games anywhere, we got you covered!</p>
-                    <p><b>GDevApp</b> is a radically innovative, super powerful webapp based on GDevelop. You can start the creation of a game in 5 minutes - directly from your browser, smartphone or tablet!</p>
-                    <a href="https://gdevapp.com" target="_blank" class="btn btn-lg btn-primary">Go to GDevApp.com</a>
-                    <p>Let's give it a try and don't be shy: send us your feedback directly from the app!</p>
+                    <p class="small text-muted"><%= _('Unfortunately, for now GDevelop is a desktop application, but if you want to create games anywhere, we got you covered!') %></p>
+                    <p><%- _('<b>GDevApp</b> is a radically innovative, super powerful webapp based on GDevelop. You can start the creation of a game in 5 minutes - directly from your browser, smartphone or tablet!') %></p>
+                    <a href="https://gdevapp.com" target="_blank" class="btn btn-lg btn-primary"><%= _('Go to GDevApp.com') %></a>
+                    <p><%= _('Let\'s give it a try and don\'t be shy: send us your feedback directly from the app!') %></p>
                   </div>
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="sources-dl">
                 <div class="row">
                   <div class="col-md-offset-2 col-md-8 text-center">
-                    <p>For advanced users, you can download GDevelop sources on GitHub:</p>
-                    <a href="https://github.com/4ian/GD" target="_blank" onclick="onGitHubOpened()" class="btn btn-lg btn-primary">GitHub page</a>
-                    <p class="small text-muted">Build instructions are in the Readme.</p>
+                    <p><%= _('For advanced users, you can download GDevelop sources on GitHub:') %></p>
+                    <a href="https://github.com/4ian/GD" target="_blank" onclick="onGitHubOpened()" class="btn btn-lg btn-primary"><%= _('GitHub page') %></a>
+                    <p class="small text-muted"><%= _('Build instructions are in the Readme.') %></p>
                   </div>
                 </div>
               </div>
@@ -565,9 +565,9 @@
     <div class="section-community section-color-dark" id="community">
       <div class="row link-row text-center">
         <div class="col-md-12">
-          <a href="http://forum.compilgames.net" target="_blank" class="btn btn-lg btn-info">Community forum</a>
-          <a href="http://wiki.compilgames.net" target="_blank" class="btn btn-lg btn-info">Wiki <span class="small">(with tutorials!)</span></a>
-          <a onclick="showMenu()" class="btn btn-lg btn-info"><small>Browse all</small> GDevelop ecosystem</span></a>
+          <a href="http://forum.compilgames.net" target="_blank" class="btn btn-lg btn-info"><%= _('Community forum') %></a>
+          <a href="http://wiki.compilgames.net" target="_blank" class="btn btn-lg btn-info"><%= _('Wiki') %> <span class="small"><%= _('(with tutorials!)') %></span></a>
+          <a onclick="showMenu()" class="btn btn-lg btn-info"><%- _('<small>Browse all</small> GDevelop ecosystem</span>') %></a>
         </div>
       </div>
       <div class="row social-row">
@@ -578,7 +578,7 @@
           <div class="fb-like" data-href="https://facebook.com/GameDevelop" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
         </div>
         <div class="col-md-2">
-          <a href="https://twitter.com/Game_Develop" class="twitter-follow-button" data-count="vertical" data-show-screen-name="false">Follow GDevelop</a>
+          <a href="https://twitter.com/Game_Develop" class="twitter-follow-button" data-count="vertical" data-show-screen-name="false"><%= _('Follow GDevelop') %></a>
         </div>
         <div class="col-md-1">
           <iframe src="https://ghbtns.com/github-btn.html?user=4ian&repo=GD&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -591,7 +591,7 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8 text-center">
           <p class="text-muted">2008-2015 - <a href="http://florianrival.com" target="_blank">Florian Rival</a></p>
-          <p class="text-muted">GDevelop was created with <span class="glyphicon glyphicon-heart"></span> by <a href="http://florianrival.com" target="_blank">Florian Rival</a>, with contributors adding features, fixing bugs, sending new examples, improving the wiki, helping each other on <a href="http://forum.compilgames.net" target="_blank">the forum</a>.</p>
+          <p class="text-muted"><%- _('GDevelop was created with <span class="glyphicon glyphicon-heart"></span> by') %> <a href="http://florianrival.com" target="_blank">Florian Rival</a><%- _(', with contributors adding features, fixing bugs, sending new examples, improving the wiki, helping each other on <a href="http://forum.compilgames.net" target="_blank">the forum</a>.') %></p>
         </div>
       </div>
     </footer>

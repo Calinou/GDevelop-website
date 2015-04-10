@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.8.11",
+    "gulp-add": "0.0.2",
     "gulp-batch": "^1.0.5",
     "gulp-ejs": "^1.1.0",
     "gulp-rename": "^1.2.2",
