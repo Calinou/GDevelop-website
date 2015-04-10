@@ -6,11 +6,12 @@ var watch = require('gulp-watch');
 var batch = require('gulp-batch');
 var ejs = require('gulp-ejs');
 var gutil = require('gulp-util');
+var async = require('async');
 var wiredep = require('wiredep').stream;
 var fs = require('fs');
 var path = require('path');
 
-gulp.task('default', ['sass', 'uglify', 'ejs']);
+gulp.task('default', ['sass', 'uglify', 'wiredep']);
 
 /**
  * Build styles files
@@ -33,24 +34,33 @@ gulp.task('uglify', function () {
 });
 
 /**
+ * Add bower dependencies into .html files
+ */
+gulp.task('wiredep', ['ejs'], function () {
+    gulp.src(['public/*.html'])
+        .pipe(wiredep())
+        .pipe(gulp.dest('public'));
+});
+
+/**
  * Create HTML files from .ejs files
  */
-gulp.task('ejs', function () {
+gulp.task('ejs', function (cb) {
 	var langs = getAvailableLanguagesCatalogs();
 	gutil.log("Found these languages catalogs (with translation ratio >0.7): ", langs);
 
 	//A separate gulp stream must be launched for generating html files
 	//for each language.
-	for(var i = 0;i<langs.length;++i) {
-		(function(langCode) {
-
+	allTasks = langs.map(function(langCode) {
+		return function(cb) {
 			//Open the language catalog
     		var catalog = langCode == "en" ? "" : require('./locale/' + langCode + '.json');
 
     		//Launch a stream for generating the .ejs file for this language
 			gulp.src('src/*.ejs')
 			.on('end', function() {
-				gutil.log("Ended generating " + langCode + " files from .ejs sources")
+				gutil.log("Ended generating " + langCode + " files from .ejs sources");
+				cb();
 			})
 		    .pipe(ejs({
 		    	//The EJS helper function to be used to wrap any string to be translated
@@ -61,16 +71,19 @@ gulp.task('ejs', function () {
 
 			    	return str;
 			    }
-			}).on('error', gutil.log))
-			.pipe(wiredep())
+			}).on('error', cb))
 			.pipe(rename(function(path) {
 				if (langCode !== "en") {
 					path.basename += "-" + langCode;
 				}
 			}))
 		    .pipe(gulp.dest('public'));
-	   })(langs[i]);
-	}
+		}
+	});
+
+	async.parallel(allTasks, function(err) {
+		cb(err);
+	})
 });
 
 /**
@@ -103,7 +116,7 @@ gulp.task('update-translation', function () {
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.scss', ['sass']);
     gulp.watch('src/js/*.js', ['uglify']);
-    gulp.watch(['src/*.ejs', 'locale/*.json'], ['ejs']);
+    gulp.watch(['src/*.ejs', 'locale/*.json'], ['wiredep']);
 });
 
 /**

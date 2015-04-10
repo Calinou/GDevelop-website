@@ -11,10 +11,10 @@ if (isset($_GET["lang"])) {
 //Serve the internationalized file if existing
 if (file_exists("main-" . $_SESSION['lang'] . ".html")) {
     header("location: main-" . $_SESSION['lang'] . ".html");
-    exit();
+} else {
+	$_SESSION['lang'] = 'en';
 }
 
 //Fallback to the English one otherwise
-$_SESSION['lang'] = 'en';
 readfile("main.html");
 ?>
