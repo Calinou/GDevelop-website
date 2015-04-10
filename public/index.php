@@ -1,26 +1,20 @@
 <?php
-
-//Redirect if necessary to the adapted language
-$currentFile = $_SERVER["PHP_SELF"];
-$parts = Explode('/', $currentFile);
-if( $parts[count($parts) - 1] =="index.php") {
-    if (isset($_GET["lang"])) {
-        if ( $_GET["lang"] == "fr" ) {
-            $_SESSION['lang'] = 'fr';
-            header("location:indexFR.php");
-        }
-        else if ( $_GET["lang"] == "en" )
-            $_SESSION['lang'] = 'en';
-    }
-    else if(!isset($_SESSION['lang'])){
-        if (substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2) == "fr") {
-            $_SESSION['lang'] = 'fr';
-            header("location:indexFR.php");
-        }else{
-            $_SESSION['lang'] = 'en';
-        }
-    }
+//Detect the language of the user
+if (isset($_GET["lang"])) {
+    //Allow to overwrite the language with lang query parameter
+    $_SESSION['lang'] = $_GET["lang"];
+} else if(!isset($_SESSION['lang'])) {
+    //Autodetect otherwise
+    $_SESSION['lang'] = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
 }
 
+//Serve the internationalized file if existing
+if (file_exists("main-" . $_SESSION['lang'] . ".html")) {
+    header("location: main-" . $_SESSION['lang'] . ".html");
+    exit();
+}
+
+//Fallback to the English one otherwise
+$_SESSION['lang'] = 'en';
 readfile("main.html");
 ?>
