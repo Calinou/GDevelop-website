@@ -44,6 +44,6 @@ In .ejs files, make sure that any string to be translated is wrapped inside a ca
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 GDevelop is under the MIT and GPL v3 licenses: check out the [GD repository](https://github.com/4ian/GD) for more information and how to contribute to the software.
